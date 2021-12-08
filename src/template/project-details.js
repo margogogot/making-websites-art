@@ -2,7 +2,7 @@ import React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from "../components/layout";
 import { FiList, FiUser, FiInstagram } from "react-icons/fi";
-
+import { graphql } from 'gatsby'
 
 const ProjectDetails = ({data}) => {
     const projectData = data.projectJson;

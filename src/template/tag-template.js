@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from "gatsby";
+import { graphql } from 'gatsby'
 import Post from "../components/post";
 import Layout from "../components/layout";
 
@@ -24,14 +24,14 @@ const TagTemplate = ({data , pageContext}) => {
                                     </ul>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div className="row">
                         {tagsblogs.map((blog) => (
                         <Post column="col-lg-4 col-md-6 col-12" key={blog.node.fields.slug}
                                 content={{
-                                    ...blog.node.fields, 
+                                    ...blog.node.fields,
                                     ...blog.node.frontmatter,
                                     excerpt: blog.node.excerpt
                                 }}
