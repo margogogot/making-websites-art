@@ -1,43 +1,46 @@
 import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { convertToBgImage } from "gbimage-bridge"
 import TextLoop from "react-text-loop";
 
 const Banner = () => {
     const banenrQueryData = useStaticQuery (graphql`
         query BannerDefaultQuery {
-                homedefaultJson(id: {eq: "main-banner"}) {
+                homedefaultJson(jsonId: {eq: "main-banner"}) {
                 title
                 subtitle
                 bgImage {
-                    childImageSharp {
-                        fluid(quality: 100, maxWidth: 1920, maxHeight: 850) {
-                            ...GatsbyImageSharpFluid_withWebp
-                            presentationHeight
-                            presentationWidth
-                        }
-                    }
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 1920
+                      placeholder: BLURRED
+                      formats: [AUTO, WEBP, AVIF]
+                    )
+                  }
                 }
             },
             file(relativePath: {eq: "images/banner/headshot.jpg"}) {
-                childImageSharp {
-                  fixed (quality: 100, width: 200, height: 200) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
+              childImageSharp {
+                gatsbyImageData(
+                  width: 200
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
             }
         }
     `);
 
-    const BannerImages = banenrQueryData.homedefaultJson.bgImage.childImageSharp.fluid;
-    const PortfolioImages = banenrQueryData.file.childImageSharp.fixed;
+    const BannerImages = convertToBgImage(getImage(banenrQueryData.homedefaultJson.bgImage));
+    const PortfolioImages = getImage(banenrQueryData.file);
     const Title = banenrQueryData.homedefaultJson.title;
     const SubTitle = banenrQueryData.homedefaultJson.subtitle;
     return (
         <div className="rn-slider-area" id="home">
             {/* Start Single Slider  */}
-            <BackgroundImage className="rn-slide slider-style-01 banner-fixed-height" fluid={BannerImages}>
+            <BackgroundImage className="rn-slide slider-style-01 banner-fixed-height" {...BannerImages}>
                 <div className="wrapper">
                     <div className="container">
                         <div className="row">
@@ -45,7 +48,7 @@ const Banner = () => {
                                 <div className="inner">
                                     <div className="content text-center">
                                         <div className="thumbnail">
-                                            <Img className="portfolio-images" fixed={PortfolioImages} />
+                                            <GatsbyImage className="portfolio-images" image={PortfolioImages} />
                                         </div>
                                         <h1 className="title" dangerouslySetInnerHTML={{ __html: Title }}></h1>
                                         <h4 className="subtitle">I'm a

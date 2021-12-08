@@ -15,7 +15,7 @@ const Service = () => {
                   }
                 }
             },
-            homedefaultJson(id: {eq: "skill"}) {
+            homedefaultJson(jsonId: {eq: "skill"}) {
                 title
                 description
             }

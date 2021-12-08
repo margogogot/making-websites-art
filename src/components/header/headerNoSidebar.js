@@ -1,7 +1,6 @@
 import React, {Fragment, useState, useEffect} from "react";
 import PropTypes from "prop-types";
 import {useStaticQuery, graphql , Link} from 'gatsby';
-import Img from "gatsby-image";
 import Scrollspy from 'react-scrollspy';
 import arloLogo from '../../data/images/logo/mwa-light.svg'
 // Start Header Area

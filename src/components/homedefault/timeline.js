@@ -1,6 +1,6 @@
 import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Timeline = () => {
     const TimelineData = useStaticQuery (graphql`
@@ -14,7 +14,7 @@ const Timeline = () => {
             }
         }
     `);
-    const envatoImages = TimelineData.file.childImageSharp.fixed;
+    const envatoImages = getImage(TimelineData.file);
     return (
         <div className="timeline-area rn-section-gap bg-color-white">
             <div className="container">
@@ -32,7 +32,7 @@ const Timeline = () => {
                         <div className="single-timeline">
                             <div className="inner">
                                 <div className="time"><span>2017 - Current</span></div>
-                                <Img className="envato-images" fixed={envatoImages} />
+                                <GatsbyImage className="envato-images" image={envatoImages} />
                                 <span className="job">Full Stack Developer</span>
                                 <p>With 20 years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success.</p>
                             </div>
@@ -45,7 +45,7 @@ const Timeline = () => {
                         <div className="single-timeline">
                             <div className="inner">
                                 <div className="time"><span>2014 - 2017</span></div>
-                                <Img className="envato-images" fixed={envatoImages} />
+                                <GatsbyImage className="envato-images" image={envatoImages} />
                                 <span className="job">Web Developer</span>
                                 <p>With 20 years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success.</p>
                             </div>
@@ -58,7 +58,7 @@ const Timeline = () => {
                         <div className="single-timeline">
                             <div className="inner">
                                 <div className="time"><span>2012 - 2014</span></div>
-                                <Img className="envato-images" fixed={envatoImages} />
+                                <GatsbyImage className="envato-images" image={envatoImages} />
                                 <span className="job">Systems Analyst</span>
                                 <p>With 20 years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success.</p>
                             </div>
@@ -71,7 +71,7 @@ const Timeline = () => {
                         <div className="single-timeline">
                             <div className="inner">
                                 <div className="time"><span>2010 - 2012</span></div>
-                                <Img className="envato-images" fixed={envatoImages} />
+                                <GatsbyImage className="envato-images" image={envatoImages} />
                                 <span className="job">Graphic Designer</span>
                                 <p>With 20 years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success.</p>
                             </div>

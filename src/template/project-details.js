@@ -1,6 +1,5 @@
 import React from 'react';
-import Img from "gatsby-image";
-import Image from "../elements/image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from "../components/layout";
 import { FiList, FiUser, FiInstagram } from "react-icons/fi";
 
@@ -38,18 +37,18 @@ const ProjectDetails = ({data}) => {
                                     </div>
                                 </div>
                                 <div className="thumbnail mt--90 mt_md--40 mt_sm--40">
-                                    <Image fluid={projectData.featured_image.childImageSharp.fluid} />
+                                    <GatsbyImage image={getImage(projectData.featured_image)} />
                                 </div>
 
                                 <div className="image-group">
                                     {projectImage.map((data, index) => (
                                         <div className="single-image mt--30" key={index}>
-                                            <Img fluid={data.image.childImageSharp.fluid} />
+                                            <GatsbyImage image={getImage(data.image)} />
                                         </div>
                                     ))}
-                                </div>   
+                                </div>
 
-                               
+
                             </div>
                         </div>
                     </div>
@@ -88,7 +87,7 @@ export const query = graphql `
                     }
                 }
             }
-            
+
         }
     }
 `;

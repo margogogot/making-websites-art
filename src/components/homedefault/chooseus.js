@@ -1,7 +1,7 @@
 import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import { FiArrowRightCircle, FiLayers , FiDatabase} from "react-icons/fi";
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const chooseusdata = [
     {
@@ -27,7 +27,7 @@ const chooseusdata = [
 const Chooseus = () => {
     const chooseusQueryData = useStaticQuery(graphql`
         query chooseusQueryQuery {
-            homedefaultJson(id: {eq: "chooseus"}) {
+            homedefaultJson(jsonId: {eq: "chooseus"}) {
                 imagegroup {
                     image {
                         childImageSharp {
@@ -51,7 +51,7 @@ const Chooseus = () => {
                         <div className="image-group">
                             {ChooseusImage.map((data, index) => (
                                 <div className="single-image" key={index}>
-                                    <Img fluid={data.image.childImageSharp.fluid} />
+                                    <GatsbyImage image={getImage(data)} />
                                 </div>
                             ))}
                         </div>
@@ -70,11 +70,11 @@ const Chooseus = () => {
                                         </div>
                                     </div>
                                 ))}
-                            </div>  
-                        </div>  
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
     )
 }

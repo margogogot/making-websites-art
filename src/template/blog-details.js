@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from "gatsby";
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from "../components/layout";
 import { slugify } from "../utils/utilityFunctions";
 import { DiscussionEmbed } from 'disqus-react';
@@ -12,7 +12,7 @@ const BlogDetails = ({data, pageContext}) => {
     } = data.markdownRemark.frontmatter;
     const imageSrc = image.childImageSharp;
     const {html} = data.markdownRemark;
-    
+
     const baseUrl = 'https://gatsbytutorial.co.uk/'
     const disqusShortname = 'https-gatsbytutorial-co-uk';
     const disqusConfig = {
@@ -29,7 +29,7 @@ const BlogDetails = ({data, pageContext}) => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="post-image">
-                                <Img fluid={imageSrc.fluid} alt={title}/>
+                                <GatsbyImage image={getImage(imageSrc)} alt={title}/>
                             </div>
                             <div className="post-single-title">
                                 <h1 className="post-title">{title}</h1>
@@ -53,8 +53,8 @@ const BlogDetails = ({data, pageContext}) => {
                                     <h3>Share This Post</h3>
                                     <ul className="social-share-links liststyle d-flex justify-content-center">
                                         <li>
-                                            <a className="facebook" target="_blank" rel="noopener noreferrer" href={'https://www.facebook.com/sharer.php?u=' + 
-                                            baseUrl + 
+                                            <a className="facebook" target="_blank" rel="noopener noreferrer" href={'https://www.facebook.com/sharer.php?u=' +
+                                            baseUrl +
                                             pageContext.slug
                                             }>
                                                 <span>facebook</span>
@@ -62,8 +62,8 @@ const BlogDetails = ({data, pageContext}) => {
                                         </li>
 
                                         <li>
-                                            <a className="twitter" target="_blank" rel="noopener noreferrer" href={'https://www.twitter.com/share?url=' + 
-                                            baseUrl + 
+                                            <a className="twitter" target="_blank" rel="noopener noreferrer" href={'https://www.twitter.com/share?url=' +
+                                            baseUrl +
                                             pageContext.slug +
                                             '&text=' +
                                             title +
@@ -76,8 +76,8 @@ const BlogDetails = ({data, pageContext}) => {
                                         </li>
 
                                         <li>
-                                            <a className="google" target="_blank" rel="noopener noreferrer" href={'https://plus.google.com/share?url=' + 
-                                            baseUrl + 
+                                            <a className="google" target="_blank" rel="noopener noreferrer" href={'https://plus.google.com/share?url=' +
+                                            baseUrl +
                                             pageContext.slug
 
                                             }>
@@ -86,8 +86,8 @@ const BlogDetails = ({data, pageContext}) => {
                                         </li>
 
                                         <li>
-                                            <a className="linkedin" target="_blank" rel="noopener noreferrer" href={'https://www.linkedin.com/shareArticle?url=' + 
-                                            baseUrl + 
+                                            <a className="linkedin" target="_blank" rel="noopener noreferrer" href={'https://www.linkedin.com/shareArticle?url=' +
+                                            baseUrl +
                                             pageContext.slug
                                             }>
                                                 <span>linkedin</span>
@@ -100,7 +100,7 @@ const BlogDetails = ({data, pageContext}) => {
                                 <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
                             </div>
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
         </Layout>

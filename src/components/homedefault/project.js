@@ -6,7 +6,7 @@ import ProjectOne from "../../elements/project/projectOne";
 const Project = () => {
     const portfolioData = useStaticQuery(graphql`
         query portfolioDataQuery {
-            homedefaultJson(id: {eq: "portfolio"}) {
+            homedefaultJson(jsonId: {eq: "portfolio"}) {
             title
             subtitle
             }

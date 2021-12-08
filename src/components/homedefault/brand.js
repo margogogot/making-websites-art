@@ -1,18 +1,21 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react';
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Brand = () => {
     const brandQueryData = useStaticQuery(graphql`
         query brandQuery {
-            homedefaultJson(id: {eq: "brand"}) {
+            homedefaultJson(jsonId: {eq: "brand"}) {
                 brandGroup {
                     image {
-                        childImageSharp {
-                            fixed(quality: 100, width: 160, height: 65) {
-                                ...GatsbyImageSharpFixed
-                            }
-                        }
+                      childImageSharp {
+                        gatsbyImageData(
+                          width: 160
+                          height: 65
+                          placeholder: BLURRED
+                          formats: [AUTO, WEBP, AVIF]
+                        )
+                      }
                     }
                 }
             }
@@ -27,7 +30,7 @@ const Brand = () => {
                         <div className="brand-list-wrapper">
                             {BrandImage.map((data, index) => (
                                 <div className="single-image" key={index}>
-                                    <Img fixed={data.image.childImageSharp.fixed} />
+                                    <GatsbyImage image={getImage(data)} />
                                 </div>
                             ))}
                         </div>

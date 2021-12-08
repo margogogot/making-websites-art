@@ -1,15 +1,12 @@
 import React from 'react';
 import {Link} from 'gatsby'
-import Image from "../image";
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 
 const Projectcard = ({image, id, title, category, column}) => {
     let projectImg;
     if(image.fixed && typeof image.fixed !== 'function'){
-        projectImg = <Img fixed={image.fixed} alt={title}/>;
-    } else if(image.fluid){
-        projectImg = <Image fluid={image.fluid} alt={title}/>
+        projectImg = <GatsbyImage image={getImage(image)} alt={title}/>;
     } else{
         projectImg = <img src={image.src} alt={title}/>
     }

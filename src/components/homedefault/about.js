@@ -1,6 +1,6 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby';
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { FiMapPin, FiPhoneIncoming ,FiGift, FiBookOpen , FiMail, FiCalendar, FiBook} from "react-icons/fi";
 
 const infoList = [
@@ -52,7 +52,7 @@ const infoList = [
 const About = ( ) => {
     const aboutQueryData = useStaticQuery(graphql`
         query AboutDefaultQuery {
-            homedefaultJson (id: {eq: "about"}) {
+            homedefaultJson (jsonId: {eq: "about"}) {
                 title
                 description
                 downloadButton
@@ -65,16 +65,18 @@ const About = ( ) => {
                 }
             },
             file(relativePath: {eq: "images/banner/person-image-2.jpg"}) {
-                childImageSharp {
-                  fixed (quality: 100, width: 395, height: 470) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
+              childImageSharp {
+                gatsbyImageData(
+                  width: 395
+                  height: 470
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
             }
         }
     `);
-
-    const PortfolioImages = aboutQueryData.file.childImageSharp.fixed;
+    const PortfolioImages = getImage(aboutQueryData.file);
     const title = aboutQueryData.homedefaultJson.title;
     const description = aboutQueryData.homedefaultJson.description;
     const downloadButton = aboutQueryData.homedefaultJson.downloadButton;
@@ -95,7 +97,7 @@ const About = ( ) => {
                     <div className="col-lg-5 col-md-12 col-12">
                         <div className="thumbnail">
                             <div className="image">
-                                <Img className="portfolio-images" fixed={PortfolioImages} />
+                                <GatsbyImage className="portfolio-images" image={PortfolioImages} />
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 const Testimonial = () => {
     const testimonialQueryData = useStaticQuery(graphql`
         query testimonialQuery {
-            homedefaultJson(id: {eq: "testimonial"}) {
+            homedefaultJson(jsonId: {eq: "testimonial"}) {
                 title
                 subtitle
                 description
