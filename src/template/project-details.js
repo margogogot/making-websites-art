@@ -27,7 +27,9 @@ const ProjectDetails = ({data}) => {
                                                 <h3>Details</h3>
                                                 <ul className="list_holder">
                                                     <li><span className="icon"><FiList />Category:</span><span className="projectinfo">{projectData.category}</span></li>
+                                                    {projectData.client &&
                                                     <li><span className="icon"><FiUser />Client:</span><span className="projectinfo">{projectData.client}</span></li>
+                                                    }
                                                     {projectData.link &&
                                                       <li><span className="icon"><FiExternalLink />Link:</span><span className="projectinfo"><a href={projectData.link} rel="nofollow" target="_blank">{projectData.title}</a></span></li>
                                                     }
