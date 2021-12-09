@@ -39,8 +39,8 @@ const ContactForm = ({url}) => {
           .join("&")
     }
 
-    const onSubmit = (data, e) => {
-  		const form = e.target;
+    const onSubmit = (data, event) => {
+  		const form = event.target;
   		setServerState({ submitting: true });
       event.preventDefault()
       fetch("/", {
@@ -65,9 +65,9 @@ const ContactForm = ({url}) => {
   	}
 
     const isErrors = Object.keys(errors).length !== 0 && true;
-	const onChangeHandler = e => {
-		setValue({ ...value, [e.target.name]: e.target.value })
-	}
+    	const onChangeHandler = e => {
+    		setValue({ ...value, [e.target.name]: e.target.value })
+	  }
 
     return (
         <form data-netlify="true" name="contactForm" method="post" onSubmit={handleSubmit(onSubmit)}>
