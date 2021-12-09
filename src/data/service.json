@@ -8,14 +8,14 @@
     },
     {
         "id" : "service-4",
-        "number": "04",
+        "number": "02",
         "title": "Web Optimization",
         "description": "Is your website loading slowly? Are you buried in plugins and extensions and not sure where to go next? I can provide solutions to bring your site up to speed.",
         "readmoreButton": ""
     },
     {
         "id" : "service-2",
-        "number": "02",
+        "number": "03",
         "title": "Graphic Design",
         "description": "Unclutter that web space with a clean, intuitive design. Responsive mobile-first design is always a must to gain a wider and more engaged audience.",
         "readmoreButton": ""
