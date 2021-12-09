@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios'
 import { useForm } from "react-hook-form";
 
 const ContactForm = ({url}) => {

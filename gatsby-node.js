@@ -37,10 +37,10 @@ exports.createPages = ({actions, graphql}) => {
     const { createPage } = actions;
     const templates =  {
         projectDetails: path.resolve('src/template/project-details.js'),
-        blogDetails: path.resolve('src/template/blog-details.js'),
-        categoryPost: path.resolve('src/template/category-post.js'),
-        tagPost: path.resolve('src/template/tag-template.js'),
-        authorPage: path.resolve('src/template/archive.js'),
+        // blogDetails: path.resolve('src/template/blog-details.js'),
+        // categoryPost: path.resolve('src/template/category-post.js'),
+        // tagPost: path.resolve('src/template/tag-template.js'),
+        // authorPage: path.resolve('src/template/archive.js'),
     }
 
     return graphql(`
@@ -54,31 +54,11 @@ exports.createPages = ({actions, graphql}) => {
                 }
             }
 
-
-            allMarkdownRemark {
-                edges {
-                    node {
-                        fields {
-                            slug
-                            authorId
-                        }
-                        frontmatter {
-                            author {
-                                name
-                            }
-                            tags
-                            category
-                        }
-                    }
-                }
-            }
-
-
         }
     `).then( res => {
         if (res.errors) return Promise.reject(res.errors)
         const project = res.data.allProjectJson.edges
-        const posts = res.data.allMarkdownRemark.edges
+        // const posts = res.data.allMarkdownRemark.edges
 
          // Create Project Page
          project.forEach(({ node }) => {
