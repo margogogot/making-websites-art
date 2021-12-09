@@ -33,23 +33,36 @@ const ContactForm = ({url}) => {
 		}
     };
 
+    function encode(data) {
+      return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&")
+    }
 
     const onSubmit = (data, e) => {
-		const form = e.target;
-		setServerState({ submitting: true });
-    handleServerResponse(true, "Thanks! We'll be in touch!", form);
-		// axios({
-		// 	method: "post",
-		// 	url: url,
-		// 	data
-		// })
-		// 	.then(res => {
-		// 		handleServerResponse(true, "Thanks! for being with us", form);
-		// 	})
-		// 	.catch(err => {
-		// 		handleServerResponse(false, err.response.data.error, form);
-		// 	});
-	}
+  		const form = e.target;
+  		setServerState({ submitting: true });
+      event.preventDefault()
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": event.target.getAttribute("name"),
+          ...name
+        })
+      }).then(() => handleServerResponse(true, "Thanks! We'll be in touch!", form)).catch(error => alert(error))
+  		// axios({
+  		// 	method: "post",
+  		// 	url: url,
+  		// 	data
+  		// })
+  		// 	.then(res => {
+  		// 		handleServerResponse(true, "Thanks! for being with us", form);
+  		// 	})
+  		// 	.catch(err => {
+  		// 		handleServerResponse(false, err.response.data.error, form);
+  		// 	});
+  	}
 
     const isErrors = Object.keys(errors).length !== 0 && true;
 	const onChangeHandler = e => {
@@ -57,7 +70,7 @@ const ContactForm = ({url}) => {
 	}
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} netlify>
+        <form data-netlify="true" name="contactForm" method="post" onSubmit={handleSubmit(onSubmit)}>
             <div className={`form-group ${(isErrors && errors.name) ? 'has-error' : ''} ${value.name ? 'has-value' : ''}`}>
                 <input
                     type="text"
@@ -120,6 +133,7 @@ const ContactForm = ({url}) => {
             </div>
 
             <div className="form-submit">
+                <input type="hidden" name="form-name" value="contactForm" />
                 <button className="rn-button" type="submit" disabled={serverState.submitting}>
                     Send Message
                 </button>
