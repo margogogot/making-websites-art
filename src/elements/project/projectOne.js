@@ -5,7 +5,7 @@ import Projectcard from "./projectcard";
 const ProjectOne = () => {
     const ProjectData = useStaticQuery(graphql`
         query ProjectDataQuery {
-            allProjectJson(limit: 6) {
+            allProjectJson(limit: 6, sort: {fields: jsonId}) {
                 edges {
                   node {
                     id
@@ -36,7 +36,7 @@ const ProjectOne = () => {
                     portfolioStyle="portfolio-style-1"
                     key={data.node.id}
                     id={data.node.id}
-                    image={data.node.featured_image.childImageSharp}
+                    image={data.node.featured_image}
                     title={data.node.title}
                     category={data.node.category}
                 />
