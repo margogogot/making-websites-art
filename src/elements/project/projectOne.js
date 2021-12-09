@@ -12,13 +12,14 @@ const ProjectOne = () => {
                     title
                     category
                     featured_image {
-                        childImageSharp {
-                            fluid(maxWidth: 360, maxHeight: 340, quality: 100) {
-                                ...GatsbyImageSharpFluid_withWebp
-                                presentationWidth
-                                presentationHeight
-                            }
-                        }
+                      childImageSharp {
+                        gatsbyImageData(
+                          width: 360
+                          height: 340
+                          placeholder: BLURRED
+                          formats: [AUTO, WEBP, AVIF]
+                        )
+                      }
                     }
                   }
                 }
@@ -33,7 +34,7 @@ const ProjectOne = () => {
                 <Projectcard key={data.node.id}
                     column="col-lg-4 col-md-6 col-12"
                     portfolioStyle="portfolio-style-1"
-                    key={data.node.id} 
+                    key={data.node.id}
                     id={data.node.id}
                     image={data.node.featured_image.childImageSharp}
                     title={data.node.title}

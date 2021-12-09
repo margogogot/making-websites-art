@@ -21,7 +21,6 @@ const IndexPage = () => (
         <Testimonial />
         <Timeline />
     </div>
-    <BlogPost />
     <Contact />
   </Layout>
 

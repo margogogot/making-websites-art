@@ -42,50 +42,6 @@ const Service = () => {
                 </div>
             </div>
             {/* End Service Area  */}
-
-            {/* Start Skill Area  */}
-            <div className="rn-counterup-area counterup-style-1 rn-section-gapTop">
-                <div className="container">
-                    <div className="row row--30">
-                        <div className="col-lg-6 col-md-6 col-12">
-                            <div className="left-content">
-                                <h3 className="title" dangerouslySetInnerHTML={{ __html: Title }}></h3>
-                                <p className="description">{Description}</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-12 mt_sm--30">
-                            <div className="progressbar-area">
-                                <div className="progress-bar--1">
-                                    <div className="single-progress">
-                                        <h6 className="title">Web Development</h6>
-                                        <ProgressBar now={81} />
-                                        <span className="label">81%</span>
-                                    </div>
-
-                                    <div className="single-progress">
-                                        <h6 className="title">Brand Identity</h6>
-                                        <ProgressBar now={72} />
-                                        <span className="label">72%</span>
-                                    </div>
-
-                                    <div className="single-progress">
-                                        <h6 className="title">Javascript</h6>
-                                        <ProgressBar now={89} />
-                                        <span className="label">89%</span>
-                                    </div>
-
-                                    <div className="single-progress">
-                                        <h6 className="title">Wordpress</h6>
-                                        <ProgressBar now={95} />
-                                        <span className="label">95%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* End Skill Area  */}
         </div>
     )
 }

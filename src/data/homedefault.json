@@ -9,28 +9,16 @@
 
     {
         "id": "about",
-        "title": "I'm Michael Wieczorkowski and I am a <span class='color-primary'>Full Stack Web Developer</span>",
+        "title": "My name is Michael Wieczorkowski<br/> and I make <span class='color-primary'>Websites</span>",
         "description": "Hi! My name is <span class='color-primary'>Michael Wieczorkowski</span>. I am a Web Developer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success.",
         "downloadButton": "Download CV",
         "linkBUtton": "Send Message",
         "aboutData": [
             {
-                "id": "aboutinfo-1",
-                "iconName": "FiArrowRightCircle",
-                "label": "Birthday",
-                "value": "01.07.1990"
-            },
-            {
-                "id": "aboutinfo-2",
-                "iconName": "icon",
-                "label": "Age",
-                "value": "29"
-            },
-            {
                 "id": "aboutinfo-3",
                 "iconName": "icon",
                 "label": "Location",
-                "value": "Ave 11, New York, USA"
+                "value": "Pittsburgh Area"
             },
             {
                 "id": "aboutinfo-3",
@@ -42,25 +30,7 @@
                 "id": "aboutinfo-3",
                 "iconName": "icon",
                 "label": "Study",
-                "value": "University of Chicago"
-            },
-            {
-                "id": "aboutinfo-4",
-                "iconName": "icon",
-                "label": "Degree",
-                "value": "Master"
-            },
-            {
-                "id": "aboutinfo-5",
-                "iconName": "icon",
-                "label": "Mail",
-                "value": "mymail@gmail.com"
-            },
-            {
-                "id": "aboutinfo-6",
-                "iconName": "icon",
-                "label": "Phone",
-                "value": "+77 022 177 05 05"
+                "value": "University of Pittsburgh - School of Information Science"
             }
         ]
     },

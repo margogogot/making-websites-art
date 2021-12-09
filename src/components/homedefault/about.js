@@ -1,50 +1,32 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { FiMapPin, FiPhoneIncoming ,FiGift, FiBookOpen , FiMail, FiCalendar, FiBook} from "react-icons/fi";
-
+import { FiMapPin, FiPhoneIncoming, FiBookOpen , FiMail, FiCalendar, FiBook} from "react-icons/fi";
+import { GiVirgo } from "react-icons/gi";
 const infoList = [
-    {
-        "id": "1",
-        "icon": <FiGift />,
-        "label": "Birthday:",
-        "link": "01.07.1990"
-    },
     {
         "id": "2",
         "icon": <FiMapPin />,
         "label": "Location:",
-        "link": "Ave 11, New York, USA"
+        "link": "Pittsburgh Area"
     },
     {
         "id": "3",
         "icon": <FiBookOpen />,
         "label": "Study:",
-        "link": "University of Chicago"
+        "link": "University of Pittsburgh - School of Information Science"
     },
     {
         "id": "4",
         "icon": <FiMail />,
         "label": "Mail:",
-        "link": "mymail@gmail.com"
+        "link": "mike@sqrld.com"
     },
     {
-        "id": "4",
-        "icon": <FiCalendar />,
-        "label": "Age:",
-        "link": "30"
-    },
-    {
-        "id": "4",
-        "icon": <FiBook />,
-        "label": "Degree:",
-        "link": "Master"
-    },
-    {
-        "id": "4",
-        "icon": <FiPhoneIncoming />,
-        "label": "Phone:",
-        "link": "+77 022 177 05 05"
+        "id": "5",
+        "icon": <GiVirgo />,
+        "label": "Astrological Sign:",
+        "link": "Virgo"
     },
 ]
 
@@ -64,7 +46,7 @@ const About = ( ) => {
                     value
                 }
             },
-            file(relativePath: {eq: "images/banner/person-image-2.jpg"}) {
+            file(relativePath: {eq: "images/banner/headshot-2.jpg"}) {
               childImageSharp {
                 gatsbyImageData(
                   width: 395
@@ -120,8 +102,7 @@ const About = ( ) => {
                                     </ul>
                                 }
                                 <div className="button-group mt--20">
-                                    {downloadButton && <a className="rn-button" href="#downloadbutton"><span>{downloadButton}</span></a>}
-                                    {linkBUtton && <a className="rn-button" href="#linkbutton"><span>{linkBUtton}</span></a>}
+                                    {linkBUtton && <a className="rn-button" href="#contact"><span>{linkBUtton}</span></a>}
                                 </div>
                             </div>
                         </div>

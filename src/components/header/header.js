@@ -2,7 +2,7 @@ import React, {Fragment, useState, useEffect} from "react";
 import PropTypes from "prop-types";
 import {useStaticQuery, graphql , Link} from 'gatsby';
 import Scrollspy from 'react-scrollspy';
-import { FaFacebookF ,FaTwitter, FaLinkedinIn , FaInstagram , FaBehance } from "react-icons/fa";
+import { FaGithub ,FaTwitter, FaLinkedinIn , FaCodepen , FaBehance } from "react-icons/fa";
 import arloLogo from '../../data/images/logo/desktop-light-logo.svg'
 
 
@@ -69,13 +69,6 @@ const Header = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="nav-link menu-hover-link" href="/#news">
-                                        <span className="hover-item">
-                                            <span data-text="News">News</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
                                     <a className="nav-link menu-hover-link" href="/#contact">
                                         <span className="hover-item">
                                             <span data-text="Contact">Contact</span>
@@ -90,11 +83,9 @@ const Header = () => {
                     {/* Start Header Bottom  */}
                     <div className="header-bottom">
                         <ul className="social-icons">
-                            <li><a href="facebook.com"><FaFacebookF /></a></li>
-                            <li><a href="twitter.com"><FaTwitter /></a></li>
-                            <li><a href="linkedin.com"><FaLinkedinIn /></a></li>
-                            <li><a href="instagram.com"><FaInstagram /></a></li>
-                            <li><a href="behance.com"><FaBehance /></a></li>
+                            <li><a href="https://www.linkedin.com/in/mikewieczorkowski/" target="_blank"><FaLinkedinIn /></a></li>
+                            <li><a href="https://github.com/lordhissyfit" target="_blank"><FaGithub /></a></li>
+                            <li><a href="https://codepen.io/lordhissyfit" target="_blank"><FaCodepen /></a></li>
                         </ul>
                     </div>
 

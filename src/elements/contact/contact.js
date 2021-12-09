@@ -1,50 +1,20 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react';
-import { FiMapPin, FiPhone, FiGlobe, FiTwitter,FiFacebook, FiInstagram, FiPhoneIncoming } from "react-icons/fi";
+import { FiLinkedin, FiGithub, FiGlobe, FiTwitter,FiFacebook, FiInstagram, FiPhoneIncoming } from "react-icons/fi";
 import Contactform from "./contactform";
 const infoList = [
     {
         "id": "1",
-        "icon": <FiMapPin />,
-        "label": "Location:",
-        "link": "Ave 11, New York, USA"
+        "icon": <FiLinkedin />,
+        "label": "LinkedIn:",
+        "link": "https://www.linkedin.com/in/mikewieczorkowski/"
     },
     {
         "id": "2",
-        "icon": <FiPhone />,
-        "label": "Phone:",
-        "link": "+77 022 177 05 05"
-    },
-    {
-        "id": "3",
-        "icon": <FiGlobe />,
-        "label": "Website:",
-        "link": "rainbow-themes.com"
-    },
-    {
-        "id": "4",
-        "icon": <FiTwitter />,
-        "label": "Twitter:",
-        "link": "@rainbowTwitter"
-    },
-    {
-        "id": "4",
-        "icon": <FiFacebook />,
-        "label": "Facebook:",
-        "link": "@rainbowFacebook"
-    },
-    {
-        "id": "4",
-        "icon": <FiInstagram />,
-        "label": "Instagram:",
-        "link": "@rainbowInstagram"
-    },
-    {
-        "id": "4",
-        "icon": <FiPhoneIncoming />,
-        "label": "Whatsapp:",
-        "link": "@rainbowWhatsapp"
-    },
+        "icon": <FiGithub />,
+        "label": "GitHub:",
+        "link": "https://github.com/lordhissyfit"
+    }
 ]
 
 const Contact = () => {
@@ -72,7 +42,7 @@ const Contact = () => {
                         <div className="section-title mb--30">
                             <span className="subtitle">{Description}</span>
                             <h2 className="title" dangerouslySetInnerHTML={{ __html: Title }}></h2>
-                            <p className="description mt--75 mt_sm--30 mt_md--30">Please fill out the form on this section to contact with me. Or call <br /> between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday</p>
+                            <p className="description mt--75 mt_sm--30 mt_md--30">Please fill out the form on this section to contact with me.</p>
                         </div>
                     </div>
                 </div>
@@ -90,7 +60,7 @@ const Contact = () => {
                                 <div className="list" key={index}>
                                     <div className="icon">{value.icon}</div>
                                     <span className="label">{value.label}</span>
-                                    <a className="link" href="#labelvalue">{value.link}</a>
+                                    <a className="link" href={value.link} target="_blank">{value.link}</a>
                                 </div>
                             ))}
                         </div>

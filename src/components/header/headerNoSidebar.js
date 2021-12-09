@@ -100,13 +100,6 @@ const HeaderNoSidebar = () => {
                             </li>
 
                             <li>
-                                <a className="menu-hover-link" href="/#news" onClick={onMenuToggleClick}>
-                                    <span className="hover-item">
-                                        <span data-text="News">News</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
                                 <a className="menu-hover-link" href="/#contact" onClick={onMenuToggleClick}>
                                     <span className="hover-item">
                                         <span data-text="Contact">Contact</span>
