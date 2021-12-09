@@ -95,88 +95,88 @@ exports.createPages = ({actions, graphql}) => {
         })
 
         // Create Single Blog Page
-        posts.forEach(({ node }) => {
-            createPage({
-                path: `${slugify(node.fields.slug)}`,
-                component: templates.blogDetails,
-                context: {
-                    slug: node.fields.slug
-                }
-            })
-        })
+        // posts.forEach(({ node }) => {
+        //     createPage({
+        //         path: `${slugify(node.fields.slug)}`,
+        //         component: templates.blogDetails,
+        //         context: {
+        //             slug: node.fields.slug
+        //         }
+        //     })
+        // })
 
         // Create Single Blog Page
 
         // Start Category Area
 
         // For get All Categiry Pages
-        let categories = []
-        _.each(posts , edge => {
-            if (_.get(edge , 'node.frontmatter.category')) {
-                categories = categories.concat(edge.node.frontmatter.category)
-            }
-        })
+        // let categories = []
+        // _.each(posts , edge => {
+        //     if (_.get(edge , 'node.frontmatter.category')) {
+        //         categories = categories.concat(edge.node.frontmatter.category)
+        //     }
+        // })
 
         // [design , code]
-        let categoryPostCounts = {}
-        categories.forEach( category => {
-            categoryPostCounts[category] = (categoryPostCounts[category] || 0) + 1
-        })
-        categories = _.uniq(categories)
+        // let categoryPostCounts = {}
+        // categories.forEach( category => {
+        //     categoryPostCounts[category] = (categoryPostCounts[category] || 0) + 1
+        // })
+        // categories = _.uniq(categories)
 
 
         // Create Tag Posts Pages for indivedual Tag page
-        categories.forEach(category => {
-            createPage({
-                path: `/category/${slugify(category)}`,
-                component: templates.categoryPost,
-                context: {
-                    category
-                }
-            })
-        })
+        // categories.forEach(category => {
+        //     createPage({
+        //         path: `/category/${slugify(category)}`,
+        //         component: templates.categoryPost,
+        //         context: {
+        //             category
+        //         }
+        //     })
+        // })
         // End Category Area
 
 
 
         // Start Tags Pages
-        let tags = []
-        _.each(posts , edge => {
-            if (_.get(edge , 'node.frontmatter.tags')) {
-                tags = tags.concat(edge.node.frontmatter.tags)
-            }
-        })
+        // let tags = []
+        // _.each(posts , edge => {
+        //     if (_.get(edge , 'node.frontmatter.tags')) {
+        //         tags = tags.concat(edge.node.frontmatter.tags)
+        //     }
+        // })
         // Create Tag Posts Pages for indivedual Tag page
-        tags.forEach(tag => {
-            createPage({
-                path: `/tag/${slugify(tag)}`,
-                component: templates.tagPost,
-                context: {
-                    tag
-                }
-            })
-        })
+        // tags.forEach(tag => {
+        //     createPage({
+        //         path: `/tag/${slugify(tag)}`,
+        //         component: templates.tagPost,
+        //         context: {
+        //             tag
+        //         }
+        //     })
+        // })
         // End Category Area
 
 
 
         // Start Create Authors Page
-        let authors = []
-        _.each(posts, edge => {
-            if(_.get(edge, 'node.fields.authorId')){
-                authors = authors.concat(edge.node.fields.authorId)
-            }
-        })
-        authors = _.uniq(authors)
-        authors.forEach(author => {
-            createPage({
-                path: `/author/${slugify(author)}`,
-                component: templates.authorPage,
-                context: {
-                    author
-                }
-            })
-        })
+        // let authors = []
+        // _.each(posts, edge => {
+        //     if(_.get(edge, 'node.fields.authorId')){
+        //         authors = authors.concat(edge.node.fields.authorId)
+        //     }
+        // })
+        // authors = _.uniq(authors)
+        // authors.forEach(author => {
+        //     createPage({
+        //         path: `/author/${slugify(author)}`,
+        //         component: templates.authorPage,
+        //         context: {
+        //             author
+        //         }
+        //     })
+        // })
         // End Create Authors Page
 
 
