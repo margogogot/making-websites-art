@@ -18,8 +18,6 @@ const IndexPage = () => (
     <Service />
     <div id="portfolio">
         <Project />
-        <Testimonial />
-        <Timeline />
     </div>
     <Contact />
   </Layout>

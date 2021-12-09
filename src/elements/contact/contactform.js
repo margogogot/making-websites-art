@@ -41,6 +41,7 @@ const ContactForm = ({url}) => {
 
     const onSubmit = (data, event) => {
   		const form = event.target;
+      console.log(data)
   		setServerState({ submitting: true });
       event.preventDefault()
       fetch("/", {
@@ -48,7 +49,7 @@ const ContactForm = ({url}) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": event.target.getAttribute("name"),
-          ...event.target
+          ...data
         })
       }).then(() => handleServerResponse(true, "Thanks! We'll be in touch!", form)).catch(error => alert(error))
   		// axios({

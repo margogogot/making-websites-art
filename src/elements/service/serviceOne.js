@@ -30,7 +30,6 @@ const ServiceOne = (props) => {
                             <div className="content">
                                 <h3 className="title">{data.node.title}</h3>
                                 <p className="description">{data.node.description}</p>
-                                <a className="readmore-btn" href="#service">{data.node.readmoreButton}</a>
                             </div>
                         </div>
                     </div>

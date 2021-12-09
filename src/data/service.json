@@ -3,42 +3,21 @@
         "id" : "service-1",
         "number": "01",
         "title": "Web Development",
-        "description": "Web development is the work involved in developing a web site for the Internet...",
-        "readmoreButton": "Read More..."
+        "description": "I am mainly a web developer who specializes in solving unique problems. Have an idea that you're not sure will work? I'll bring you a solution.",
+        "readmoreButton": ""
+    },
+    {
+        "id" : "service-4",
+        "number": "04",
+        "title": "Web Optimization",
+        "description": "Is your website loading slowly? Are you buried in plugins and extensions and not sure where to go next? I can provide solutions to bring your site up to speed.",
+        "readmoreButton": ""
     },
     {
         "id" : "service-2",
         "number": "02",
         "title": "Graphic Design",
-        "description": "Graphic design is the process of visual communication and problem-solving...",
-        "readmoreButton": "Read More..."
-    },
-    {
-        "id" : "service-3",
-        "number": "03",
-        "title": "Adobe Photoshop",
-        "description": "Adobe Photoshop is software that is extensively used for raster image editing...",
-        "readmoreButton": "Read More..."
-    },
-    {
-        "id" : "service-4",
-        "number": "04",
-        "title": "Web Organize",
-        "description": "Web development is the work involved in developing a web site for the Internet...",
-        "readmoreButton": "Read More..."
-    },
-    {
-        "id" : "service-5",
-        "number": "05",
-        "title": "Branding Identity",
-        "description": "Web development is the work involved in developing a web site for the Internet...",
-        "readmoreButton": "Read More..."
-    },
-    {
-        "id" : "service-6",
-        "number": "06",
-        "title": "Social Media",
-        "description": "Adobe Photoshop is software that is extensively used for raster image editing...",
-        "readmoreButton": "Read More..."
+        "description": "Unclutter that web space with a clean, intuitive design. Responsive mobile-first design is always a must to gain a wider and more engaged audience.",
+        "readmoreButton": ""
     }
 ]
