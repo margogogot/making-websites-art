@@ -1,11 +1,14 @@
 import React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from "../components/layout";
-import { FiList, FiUser, FiInstagram } from "react-icons/fi";
+import { FiList, FiUser, FiInstagram, FiExternalLink } from "react-icons/fi";
 import { graphql } from 'gatsby'
 
 const ProjectDetails = ({data}) => {
     const projectData = data.projectJson;
+    console.log(projectData)
+    const projectFeaturedImage = getImage(projectData.featured_image)
+    console.log(projectFeaturedImage)
     const projectImage = data.projectJson.features;
     return (
         <Layout>
@@ -25,7 +28,9 @@ const ProjectDetails = ({data}) => {
                                                 <ul className="list_holder">
                                                     <li><span className="icon"><FiList />Category:</span><span className="projectinfo">{projectData.category}</span></li>
                                                     <li><span className="icon"><FiUser />Client:</span><span className="projectinfo">{projectData.client}</span></li>
-                                                    <li><span className="icon"><FiInstagram />Images by:</span><span className="projectinfo">{projectData.imgesBY}</span></li>
+                                                    {projectData.link &&
+                                                      <li><span className="icon"><FiExternalLink />Link:</span><span className="projectinfo"><a href={projectData.link} rel="nofollow" target="_blank">{projectData.title}</a></span></li>
+                                                    }
                                                 </ul>
                                             </div>
                                         </div>
@@ -37,7 +42,7 @@ const ProjectDetails = ({data}) => {
                                     </div>
                                 </div>
                                 <div className="thumbnail mt--90 mt_md--40 mt_sm--40">
-                                    <GatsbyImage image={getImage(projectData.featured_image)} />
+                                    <GatsbyImage image={projectFeaturedImage} alt={projectData.title} />
                                 </div>
 
                                 <div className="image-group">
@@ -67,24 +72,27 @@ export const query = graphql `
             category
             client
             imgesBY
+            link
             featured_image {
-                childImageSharp {
-                    fluid(maxHeight: 1000, maxWidth: 2000, quality: 100) {
-                        ...GatsbyImageSharpFluid_withWebp
-                        presentationHeight
-                        presentationWidth
-                    }
-                }
+              childImageSharp {
+                gatsbyImageData(
+                  width: 2000
+                  height: 1000
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
             },
             features {
                 image {
-                    childImageSharp {
-                      fluid(maxWidth: 1920, maxHeight: 1280, quality: 100) {
-                        ...GatsbyImageSharpFluid_withWebp
-                        presentationWidth
-                        presentationHeight
-                      }
-                    }
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 1920
+                      height: 1280
+                      placeholder: BLURRED
+                      formats: [AUTO, WEBP, AVIF]
+                    )
+                  }
                 }
             }
 
