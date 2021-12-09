@@ -48,7 +48,7 @@ const ContactForm = ({url}) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": event.target.getAttribute("name"),
-          ...name
+          ...event.target
         })
       }).then(() => handleServerResponse(true, "Thanks! We'll be in touch!", form)).catch(error => alert(error))
   		// axios({
