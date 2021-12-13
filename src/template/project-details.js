@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from "../components/layout";
 import { FiList, FiUser, FiInstagram, FiExternalLink } from "react-icons/fi";
 import { graphql } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const ProjectDetails = ({data}) => {
     const projectData = data.projectJson;
@@ -31,7 +32,7 @@ const ProjectDetails = ({data}) => {
                                                     <li><span className="icon"><FiUser />Client:</span><span className="projectinfo">{projectData.client}</span></li>
                                                     }
                                                     {projectData.link &&
-                                                      <li><span className="icon"><FiExternalLink />Link:</span><span className="projectinfo"><a href={projectData.link} rel="nofollow" target="_blank">{projectData.title}</a></span></li>
+                                                      <li><span className="icon"><FiExternalLink />Link:</span><span className="projectinfo"><OutboundLink href={projectData.link} rel="nofollow" target="_blank">{projectData.title}</OutboundLink></span></li>
                                                     }
                                                 </ul>
                                             </div>
