@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react';
-import { FiLinkedin, FiGithub, FiGlobe, FiTwitter,FiFacebook, FiInstagram, FiPhoneIncoming } from "react-icons/fi";
+import { FiLinkedin, FiGithub, FiGlobe, FiTwitter,FiFacebook, FiInstagram, FiPhoneIncoming, FiCodepen } from "react-icons/fi";
 import Contactform from "./contactform";
 const infoList = [
     {
@@ -14,6 +14,12 @@ const infoList = [
         "icon": <FiGithub />,
         "label": "GitHub:",
         "link": "https://github.com/lordhissyfit"
+    },
+    {
+        "id": "3",
+        "icon": <FiCodepen />,
+        "label": "Codepen:",
+        "link": "https://codepen.io/lordhissyfit/pens/"
     }
 ]
 
