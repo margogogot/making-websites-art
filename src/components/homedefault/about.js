@@ -20,7 +20,7 @@ const infoList = [
         "id": "4",
         "icon": <FiMail />,
         "label": "Mail:",
-        "link": "mike@sqrld.com"
+        "link": "margot@sqrld.com"
     },
     {
         "id": "5",
