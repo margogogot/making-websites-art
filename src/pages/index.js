@@ -12,7 +12,7 @@ import Contact from "../elements/contact/contact";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Michael Wieczorkowski" />
+    <SEO title="Margot Wieczorkowski" />
     <Banner />
     <About />
     <Service />

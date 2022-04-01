@@ -1,7 +1,7 @@
 [
     {
         "id": "main-banner",
-        "title": "Michael <span class='color-primary'>Wieczorkowski</span>",
+        "title": "Margot <span class='color-primary'>Wieczorkowski</span>",
         "subtitle": "I'm a Full Stack Developer",
         "bgImage": "./images/banner/background-1.jpg",
         "image": "./images/banner/headshot.jpg"
@@ -9,8 +9,8 @@
 
     {
         "id": "about",
-        "title": "My name is Michael Wieczorkowski<br/> and I make <span class='color-primary'>Websites</span>",
-        "description": "Hi! My name is <span class='color-primary'>Michael Wieczorkowski</span>. I am a Web Developer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success.",
+        "title": "My name is Margot Wieczorkowski<br/> and I make <span class='color-primary'>Websites</span>",
+        "description": "Hi! My name is <span class='color-primary'>Margot Wieczorkowski</span>. I am a Web Developer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success.",
         "downloadButton": "Download CV",
         "linkBUtton": "Send Message",
         "aboutData": [
