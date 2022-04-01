@@ -7,7 +7,7 @@ const infoList = [
         "id": "1",
         "icon": <FiLinkedin />,
         "label": "LinkedIn:",
-        "link": "https://www.linkedin.com/in/mikewieczorkowski/"
+        "link": "https://www.linkedin.com/in/margotwieczorkowski/"
     },
     {
         "id": "2",
