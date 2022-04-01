@@ -46,7 +46,7 @@ const About = ( ) => {
                     value
                 }
             },
-            file(relativePath: {eq: "images/banner/headshot-2.jpg"}) {
+            file(relativePath: {eq: "images/banner/margot-w.jpg"}) {
               childImageSharp {
                 gatsbyImageData(
                   width: 395
