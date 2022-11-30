@@ -13,13 +13,13 @@ const infoList = [
         "id": "2",
         "icon": <FiGithub />,
         "label": "GitHub:",
-        "link": "https://github.com/lordhissyfit"
+        "link": "https://github.com/margogogot"
     },
     {
         "id": "3",
         "icon": <FiCodepen />,
         "label": "Codepen:",
-        "link": "https://codepen.io/lordhissyfit/pens/"
+        "link": "https://codepen.io/margogot/pens/"
     }
 ]
 
