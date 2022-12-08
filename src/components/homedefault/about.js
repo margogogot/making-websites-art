@@ -1,7 +1,7 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { FiMapPin, FiPhoneIncoming, FiBookOpen , FiMail, FiCalendar, FiBook, AiFillLinkedin} from "react-icons/fi";
+import { FiMapPin, FiPhoneIncoming, FiBookOpen , FiMail, FiCalendar, FiBook, FiLinkedin} from "react-icons/fi";
 import { GiVirgo } from "react-icons/gi";
 const infoList = [
     {
@@ -24,7 +24,7 @@ const infoList = [
     },
     {
         "id": "5",
-        "icon": <AiFillLinkedin />,
+        "icon": <FiLinkedin />,
         "label": "LinkedIn:",
         "link": "https://www.linkedin.com/in/margotwieczorkowski/"
     },
@@ -92,13 +92,25 @@ const About = ( ) => {
                                 </div>
                                 {infoList &&
                                     <ul className="myabout-list">
-                                        {infoList.map((value, index) => (
-                                          <div className="list" key={index}>
-                                              <div className="icon">{value.icon}</div>
-                                              <span className="label">{value.label}</span>
-                                              <a className="link" href={value.link} target="_blank">{value.link}</a>
-                                          </div>
-                                        ))}
+                                        {infoList.map((value, index) => {
+                                          if(value.link.startsWith('https:')){
+                                            return (
+                                                <div className="list" key={index}>
+                                                    <div className="icon">{value.icon}</div>
+                                                    <span className="label">{value.label}</span>
+                                                    <a className="link" href="#labelvalue" target="_blank">{value.link}</a>
+                                                </div>
+                                            )
+                                          }else{
+                                            return (
+                                                <div className="list" key={index}>
+                                                    <div className="icon">{value.icon}</div>
+                                                    <span className="label">{value.label}</span>
+                                                    <span className="link">{value.link}</span>
+                                                </div>
+                                            )
+                                          }
+                                        })}
                                     </ul>
                                 }
                                 <div className="button-group mt--20">
