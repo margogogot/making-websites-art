@@ -106,6 +106,7 @@ const About = ( ) => {
                                                 <div className="list" key={index}>
                                                     <div className="icon">{value.icon}</div>
                                                     <span className="label">{value.label}</span>
+                                                    <span className="link">{value.link}</span>
                                                 </div>
                                             )
                                           }
