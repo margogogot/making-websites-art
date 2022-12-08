@@ -92,25 +92,13 @@ const About = ( ) => {
                                 </div>
                                 {infoList &&
                                     <ul className="myabout-list">
-                                        {infoList.map((value, index) => {
-                                          if(value.link.startsWith('https:')){
-                                            return (
-                                                <div className="list" key={index}>
-                                                    <div className="icon">{value.icon}</div>
-                                                    <span className="label">{value.label}</span>
-                                                    <a className="link" href={value.link} target="_blank">{value.link}</a>
-                                                </div>
-                                            )
-                                          }else{
-                                            return (
-                                                <div className="list" key={index}>
-                                                    <div className="icon">{value.icon}</div>
-                                                    <span className="label">{value.label}</span>
-                                                    <span className="link">{value.link}</span>
-                                                </div>
-                                            )
-                                          }
-                                        })}
+                                        {infoList.map((value, index) => (
+                                          <div className="list" key={index}>
+                                              <div className="icon">{value.icon}</div>
+                                              <span className="label">{value.label}</span>
+                                              <a className="link" href={value.link} target="_blank">{value.link}</a>
+                                          </div>
+                                        ))}
                                     </ul>
                                 }
                                 <div className="button-group mt--20">
