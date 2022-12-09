@@ -84,8 +84,8 @@ const Header = () => {
                     <div className="header-bottom">
                         <ul className="social-icons">
                             <li><a href="https://www.linkedin.com/in/margotwieczorkowski/" target="_blank"><FaLinkedinIn /></a></li>
-                            <li><a href="https://github.com/lordhissyfit" target="_blank"><FaGithub /></a></li>
-                            <li><a href="https://codepen.io/lordhissyfit" target="_blank"><FaCodepen /></a></li>
+                            <li><a href="https://github.com/margogogot" target="_blank"><FaGithub /></a></li>
+                            <li><a href="https://codepen.io/margogot" target="_blank"><FaCodepen /></a></li>
                         </ul>
                     </div>
 
