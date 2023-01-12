@@ -2,7 +2,7 @@ import React, {Fragment, useState, useEffect} from "react";
 import PropTypes from "prop-types";
 import {useStaticQuery, graphql , Link} from 'gatsby';
 import Scrollspy from 'react-scrollspy';
-import { FaGithub ,FaTwitter, FaLinkedinIn , FaCodepen , FaBehance } from "react-icons/fa";
+import { FaGithub ,FaTwitter, FaLinkedinIn , FaCodepen , FaEtsy } from "react-icons/fa";
 import arloLogo from '../../data/images/logo/desktop-light-logo.svg'
 
 
@@ -86,6 +86,7 @@ const Header = () => {
                             <li><a href="https://www.linkedin.com/in/margotwieczorkowski/" target="_blank"><FaLinkedinIn /></a></li>
                             <li><a href="https://github.com/margogogot" target="_blank"><FaGithub /></a></li>
                             <li><a href="https://codepen.io/margogot" target="_blank"><FaCodepen /></a></li>
+                            <li><a href="https://www.etsy.com/shop/PutASquirrelOnIt" target="_blank"><FaEtsy /></a></li>
                         </ul>
                     </div>
 
