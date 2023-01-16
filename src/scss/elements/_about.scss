@@ -1,5 +1,5 @@
 /*----------------------
-About Styles  
+About Styles
 -----------------------*/
 
 .about-style-01 {
@@ -60,6 +60,7 @@ About Styles
                         color: var(--color-heading);
                         border-bottom: 1px solid transparent;
                         transition: all .3s ease;
+                        overflow-wrap: anywhere;
                     }
 
                     &+.list {
@@ -143,7 +144,7 @@ About Styles
 
 
 /*--------------------------
-    Information Data List  
+    Information Data List
 ----------------------------*/
 
 .infodata-list {

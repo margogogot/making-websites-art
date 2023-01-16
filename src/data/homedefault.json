@@ -44,7 +44,13 @@
         "id": "portfolio",
         "subtitle": "PORTFOLIO",
         "title": "FEATURED WORKS",
-        "description": "In other words, the best marketing decision you can make is to have a product or business that fulfills a real and compelling need for a real and defined group of people — no matter how much tweaking and refining this takes.(c)"
+        "description": ""
+    },
+    {
+        "id": "art-stuff",
+        "subtitle": "Art Stuff",
+        "title": "Some of my art work",
+        "description": "In addition to my regular development work, I also create digital artwork."
     },
     {
         "id": "chooseus",

@@ -1,5 +1,5 @@
 /* ----------------------
-Contact Styles  
+Contact Styles
 ------------------------*/
 .contact-info-list-wrapper {
     .list {
@@ -24,6 +24,7 @@ Contact Styles
             color: var(--color-primary);
             border-bottom: 1px solid transparent;
             transition: all .3s ease;
+            overflow-wrap: anywhere;
             &:hover {
                 border-bottom-color: var(--color-primary);
             }
@@ -47,7 +48,7 @@ Contact Styles
         background: rgb(255, 255, 255);
         padding: 0px 5px;
         transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-    } 
+    }
 
     input ,
     textarea {
@@ -75,7 +76,7 @@ Contact Styles
             outline: none;
         }
     }
- 
+
     .error {
         color: #f10;
         display: inline-block;
@@ -107,5 +108,3 @@ Contact Styles
         color: #f10;
     }
 }
-
-

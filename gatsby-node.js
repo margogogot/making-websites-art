@@ -37,6 +37,7 @@ exports.createPages = ({actions, graphql}) => {
     const { createPage } = actions;
     const templates =  {
         projectDetails: path.resolve('src/template/project-details.js'),
+        artDetails: path.resolve('src/template/art-details.js'),
         // blogDetails: path.resolve('src/template/blog-details.js'),
         // categoryPost: path.resolve('src/template/category-post.js'),
         // tagPost: path.resolve('src/template/tag-template.js'),
@@ -46,6 +47,14 @@ exports.createPages = ({actions, graphql}) => {
     return graphql(`
         {
             allProjectJson {
+                edges {
+                    node {
+                        id
+                        title
+                    }
+                }
+            },
+            allArtStuffJson {
                 edges {
                     node {
                         id
@@ -73,6 +82,22 @@ exports.createPages = ({actions, graphql}) => {
                 }
             })
         })
+
+        const artStuff = res.data.allArtStuffJson.edges
+
+        artStuff.forEach(({node}) => {
+          console.log(node)
+          console.log(`/art/${slugify(node.title)}`)
+          createPage({
+              // path: node.fields.slug,
+              path: `/art/${slugify(node.title)}`,
+              component: templates.artDetails,
+              context: {
+                  id: node.id
+              }
+          })
+        })
+
 
         // Create Single Blog Page
         // posts.forEach(({ node }) => {

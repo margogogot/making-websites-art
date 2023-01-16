@@ -1,5 +1,5 @@
 /*-----------------------
-    Header Scss  
+    Header Scss
 ------------------------*/
 
 .rn-header {
@@ -21,6 +21,8 @@
             height: 100%;
             clear: both;
             float: left;
+            display: flex;
+            flex-direction: column;
             .logo {
                 position: relative;
                 z-index: 10;
@@ -28,12 +30,11 @@
             }
             .mainmenu-inner {
                 padding: 0px 60px;
-                max-height: 500px;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
+                flex-direction: column;
                 overflow-y: auto;
-                margin: 33px 0;
-                min-height: 500px;
+                flex-grow: 1;
                 @media #{$laptop-device} {
                     max-height: 335px;
                     min-height: 335px;
@@ -72,7 +73,7 @@
                                 position: relative;
                                 line-height: 21px;
                                 letter-spacing: 1px;
-                             
+
                                 &:last-child {
                                     &::before {
                                         display: none;
@@ -88,18 +89,21 @@
                                         color: var(--color-primary);
                                     }
                                 }
-                            } 
+                            }
                         }
                     }
+                }
+                .header-bottom {
+                  display: flex;
+                  align-items: flex-end;
+                  flex-grow: 1;
+                  padding-bottom: 1rem;
                 }
             }
         }
 
         .social-icons {
             @extend %liststyle;
-            left: 60px;
-            position: absolute;
-            bottom: 60px;
 
             li {
                 margin: 0 15px 0 0;
@@ -253,7 +257,7 @@
     }
 }
 
-// Sidebar Menu 
+// Sidebar Menu
 .home-content-wrapper {
     padding-left: 400px;
     @media #{$laptop-device} {
@@ -269,5 +273,3 @@
         padding-left: 0;
     }
 }
-
-

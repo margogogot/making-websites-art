@@ -39,7 +39,7 @@ const Header = () => {
 
                     <div className="mainmenu-inner">
                         <div className="mainmenu">
-                            <Scrollspy className="mainmenu" items={['home','about', 'service', 'portfolio' , 'news' , 'contact']} currentClassName="is-current" offset={-200}>
+                            <Scrollspy className="mainmenu" items={['home','about', 'service', 'portfolio', 'art-stuff' , 'news' , 'contact']} currentClassName="is-current" offset={-200}>
                                 <li>
                                     <a className="nav-link menu-hover-link" href="/#home">
                                         <span className="hover-item">
@@ -69,6 +69,13 @@ const Header = () => {
                                     </a>
                                 </li>
                                 <li>
+                                    <a className="nav-link menu-hover-link" href="/#art-stuff">
+                                        <span className="hover-item">
+                                            <span data-text="Art Stuff">Art Stuff</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
                                     <a className="nav-link menu-hover-link" href="/#contact">
                                         <span className="hover-item">
                                             <span data-text="Contact">Contact</span>
@@ -78,16 +85,15 @@ const Header = () => {
 
                             </Scrollspy>
                         </div>
-                    </div>
-
-                    {/* Start Header Bottom  */}
-                    <div className="header-bottom">
-                        <ul className="social-icons">
-                            <li><a href="https://www.linkedin.com/in/margotwieczorkowski/" target="_blank"><FaLinkedinIn /></a></li>
-                            <li><a href="https://github.com/margogogot" target="_blank"><FaGithub /></a></li>
-                            <li><a href="https://codepen.io/margogot" target="_blank"><FaCodepen /></a></li>
-                            <li><a href="https://www.etsy.com/shop/PutASquirrelOnIt" target="_blank"><FaEtsy /></a></li>
-                        </ul>
+                        {/* Start Header Bottom  */}
+                        <div className="header-bottom">
+                            <ul className="social-icons">
+                                <li><a href="https://www.linkedin.com/in/margotwieczorkowski/" target="_blank"><FaLinkedinIn /></a></li>
+                                <li><a href="https://github.com/margogogot" target="_blank"><FaGithub /></a></li>
+                                <li><a href="https://codepen.io/margogot" target="_blank"><FaCodepen /></a></li>
+                                <li><a href="https://www.etsy.com/shop/PutASquirrelOnIt" target="_blank"><FaEtsy /></a></li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
