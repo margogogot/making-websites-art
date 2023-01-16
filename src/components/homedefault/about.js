@@ -21,13 +21,7 @@ const infoList = [
         "icon": <FiMail />,
         "label": "Mail:",
         "link": "margot@sqrld.com"
-    },
-    {
-        "id": "5",
-        "icon": <FiLinkedin />,
-        "label": "LinkedIn:",
-        "link": "https://www.linkedin.com/in/margotwieczorkowski/"
-    },
+    }
 ]
 
 
