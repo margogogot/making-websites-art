@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react';
-import { FiLinkedin, FiGithub, FiGlobe, FiTwitter,FiFacebook, FiInstagram, FiPhoneIncoming, FiCodepen } from "react-icons/fi";
+import { FiLinkedin, FiGithub, FiGlobe, FiInstagram, FiPhoneIncoming, FiCodepen, FiEtsy } from "react-icons/fi";
 import Contactform from "./contactform";
 const infoList = [
     {
@@ -20,6 +20,12 @@ const infoList = [
         "icon": <FiCodepen />,
         "label": "Codepen:",
         "link": "https://codepen.io/margogot/pens/"
+    },
+    {
+        "id": "4",
+        "icon": <FiEtsy />,
+        "label": "Etsy:",
+        "link": "https://www.etsy.com/shop/PutASquirrelOnIt"
     }
 ]
 
