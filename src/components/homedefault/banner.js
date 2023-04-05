@@ -51,8 +51,7 @@ const Banner = () => {
                                             <GatsbyImage className="portfolio-images" image={PortfolioImages} />
                                         </div>
                                         <h1 className="title" dangerouslySetInnerHTML={{ __html: Title }}></h1>
-                                        <h4 className="subtitle">I'm
-                                            <TextLoop mask={true}>
+                                        <h4 className="subtitle">I'm<TextLoop mask={true}>
                                                 <span>a Web Developer</span>
                                                 <span>a Buisness Owner</span>
                                                 <span>a Designer</span>
