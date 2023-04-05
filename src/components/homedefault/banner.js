@@ -57,7 +57,7 @@ const Banner = () => {
                                                 <span>a Buisness Owner</span>
                                                 <span>a Designer</span>
                                                 <span>an Artist</span>
-                                            </TextLoop>{" "}
+                                            </TextLoop>
                                         </h4>
                                     </div>
                                 </div>
