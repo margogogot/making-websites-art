@@ -5,7 +5,7 @@
     "client": "",
     "imgesBY": "",
     "year": "",
-    "featured_image": "./images/taktl-llc-1.jpg",
+    "featured_image": "./images/taktl-1.jpg",
     "link": "https://www.taktl-llc.com",
     "is_featured": true,
     "body": [
@@ -13,8 +13,28 @@
     ],
     "features": [
         {
-            "id": "feature-1",
-            "image": "./images/taktl-llc-2.jpg"
+            "id": "feature-2",
+            "image": "./images/taktl-2.jpg"
+        },
+        {
+            "id": "feature-3",
+            "image": "./images/taktl-3.jpg"
+        },
+        {
+            "id": "feature-4",
+            "image": "./images/taktl-4.jpg"
+        },
+        {
+            "id": "feature-5",
+            "image": "./images/taktl-5.jpg"
+        },
+        {
+            "id": "feature-6",
+            "image": "./images/taktl-6.jpg"
+        },
+        {
+            "id": "feature-7",
+            "image": "./images/taktl-7.jpg"
         }
     ]
 }
