@@ -51,12 +51,12 @@ const Banner = () => {
                                             <GatsbyImage className="portfolio-images" image={PortfolioImages} />
                                         </div>
                                         <h1 className="title" dangerouslySetInnerHTML={{ __html: Title }}></h1>
-                                        <h4 className="subtitle">I'm<TextLoop mask={true}>
-                                                <span>a Web Developer</span>
-                                                <span>a Buisness Owner</span>
-                                                <span>a Designer</span>
-                                                <span>an Artist</span>
-                                            </TextLoop>
+                                        <h4 className="subtitle">I'm<TextLoop mask={true} children={[
+                                            <span>a Web Developer</span>,
+                                            <span>a Buisness Owner</span>,
+                                            <span>a Designer</span>,
+                                            <span>an Artist</span>
+                                        ]} />
                                         </h4>
                                     </div>
                                 </div>
