@@ -5,20 +5,20 @@
     "client": "",
     "imgesBY": "",
     "year": "",
-    "featured_image": "./images/forms-surfaces.jpg",
+    "featured_image": "./images/fs-home-page.jpg",
     "link": "https://www.forms-surfaces.com",
     "is_featured": true,
     "body": [
-        "The Forms+Surfaces website was built using Drupal and a heavy amount of custom theming with PHP, JavaScript and CSS. The biggest challenge was the large amount of content that needed to be migrated while keeping the website performant for end-users."
+        "The Forms+Surfaces website was built using a Next.js frontend and the Sanity.io CMS. I've added some front-end APIs to handle form submissions, text search and contact lookup forms."
     ],
     "features": [
         {
             "id": "feature-1",
-            "image": "./images/forms-surfaces-2.jpg"
+            "image": "./images/fs-knight-bench.jpg"
         },
         {
             "id": "feature-2",
-            "image": "./images/forms-surfaces-3.jpg"
+            "image": "./images/fs-projects.jpg"
         }
     ]
 }
