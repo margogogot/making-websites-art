@@ -1,17 +1,16 @@
 {
-    "id": "project-02",
-    "title": "Vektr Digital Canvas",
+    "id": "project-01",
+    "title": "Elevator Design Studio",
     "category": "Development",
-    "client": "",
+    "client": "Forms+Surfaces",
     "imgesBY": "",
     "year": "",
-    "featured_image": "./images/vektr-digital-canvas.jpg",
-    "link": "https://vektrdigitalcanvas.com",
+    "featured_image": "./images/eds.jpg",
+    "link": "https://www.elevatordesignstudio.com",
     "is_featured": true,
     "body": [
-        "The Vektr Digital Canvas is an application that generates vector art from raster images. This artwork is presented as a multi-layered output that can be viewed in a 3D output using Three.js."
+        "The Elevator Design Studio is an elevator cab design tool that has experienced great success. By streamlining the design and ordering process of elevator cabs, this application has become an essential sales tool for Forms+Surfaces."
     ],
     "features": [
-
     ]
 }

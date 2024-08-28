@@ -1,16 +1,24 @@
 {
-    "id": "project-01",
-    "title": "Elevator Design Studio",
+    "id": "project-04",
+    "title": "Forms+Surfaces Inc",
     "category": "Development",
-    "client": "Forms+Surfaces",
+    "client": "",
     "imgesBY": "",
     "year": "",
-    "featured_image": "./images/eds.jpg",
-    "link": "https://www.elevatordesignstudio.com",
+    "featured_image": "./images/fs-home-page.jpg",
+    "link": "https://www.forms-surfaces.com",
     "is_featured": true,
     "body": [
-        "The Elevator Design Studio is an elevator cab design tool that has experienced great success. By streamlining the design and ordering process of elevator cabs, this application has become an essential sales tool for Forms+Surfaces."
+        "The Forms+Surfaces website was built using a Next.js frontend and the Sanity.io CMS. I've added some front-end APIs to handle form submissions, text search and contact lookup forms."
     ],
     "features": [
+        {
+            "id": "feature-1",
+            "image": "./images/fs-knight-bench.jpg"
+        },
+        {
+            "id": "feature-2",
+            "image": "./images/fs-projects.jpg"
+        }
     ]
 }
