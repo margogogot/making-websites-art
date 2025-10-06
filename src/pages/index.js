@@ -8,7 +8,6 @@ import Project from "../components/homedefault/project";
 import ArtStuff from '../components/homedefault/art-stuff'
 import Testimonial from "../components/homedefault/testimonial";
 import Timeline from "../components/homedefault/timeline";
-// import BlogPost from "../components/blogPost";
 import Contact from "../elements/contact/contact";
 
 const IndexPage = () => (
