@@ -28,8 +28,10 @@ const IndexPage = () => {
         <section style={{ minHeight: '100dvh', display: "flex", flexDirection: "column", gap: "2rem", justifyContent: "center", alignItems: "center" }}>
             <div style={{ maxWidth: "600px" }}>
                 <p style={{ fontWeight: "bold" }}>You're too early! Do you shake your presents before Christmas, too?</p>
-                <img src="/img/shaking-present.jpg" alt="picture of a nerd shaking a Christmas gift. That is you."></img>
-                <p>{countDownMesssage}</p>
+                <figure>
+                    <img src="/img/shaking-present.jpg" alt="picture of a nerd shaking a Christmas gift. That is you."></img>
+                    <caption>{countDownMesssage}</caption>
+                </figure>
             </div>
 
         </section>
