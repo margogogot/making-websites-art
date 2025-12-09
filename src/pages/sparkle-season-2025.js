@@ -35,7 +35,7 @@ const IndexPage = () => {
         </section>
     </Layout>)
 }
-    
 
-)
+
+
 export default IndexPage;
