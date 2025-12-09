@@ -30,7 +30,7 @@ const IndexPage = () => {
                 <p style={{ fontWeight: "bold" }}>You're too early! Do you shake your presents before Christmas, too?</p>
                 <figure>
                     <img src="/img/shaking-present.jpg" alt="picture of a nerd shaking a Christmas gift. That is you."></img>
-                    <caption>{countDownMesssage}</caption>
+                    <caption style={{width: "100%"}}>{countDownMesssage}</caption>
                 </figure>
             </div>
 
