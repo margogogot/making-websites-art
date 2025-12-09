@@ -44,7 +44,7 @@ const HeaderNoSidebar = () => {
                 <div className="header-inner">
                     {/* Header Logo  */}
                     <div className="header-left">
-                        <div className="logo">
+                        <div className="logo" style={{width: "200px"}}>
                             <Link to="/">
                                 <img src={arloLogo} style={{width: '100%'}}/>
                             </Link>
