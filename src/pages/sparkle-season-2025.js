@@ -37,7 +37,7 @@ const IndexPage = () => {
     return (<Layout>
         <SEO title="Sparkle Season 2025" />
         <section style={{ minHeight: '100dvh', display: "flex", flexDirection: "column", gap: "2rem", padding: "2rem", justifyContent: "center", alignItems: "center" }}>
-            {daysTilChristmas > 2 &&
+            {daysTilChristmas > 1 &&
                 <div style={{ maxWidth: "600px" }}>
                     <p style={{ fontWeight: "bold" }}>You're too early! Do you shake your presents before Christmas, too?</p>
                     <figure>
@@ -46,7 +46,7 @@ const IndexPage = () => {
                     </figure>
                 </div>
             }
-            {daysTilChristmas <= 2 &&
+            {daysTilChristmas <= 1 &&
                 <div style={{ maxWidth: "600px" }}>
                     {daysTilChristmas > 0 &&
                         <p style={{ fontWeight: "bold" }}>Okay, you can have an early treat.</p>
