@@ -54,6 +54,13 @@ const IndexPage = () => {
                     {daysTilChristmas < 1 &&
                         <p style={{ fontWeight: "bold" }}>It's Christmas Day!</p>
                     }
+                    <p>We made some Christmas music videos!</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ST09qjw0wTY?si=wWAQhgoLAQYq3tTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h6>Jingle Bellz</h6>
+                    <br/>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HPrrj0oyoKQ?si=9wTz9g-xV-z-Rs0N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h6>What Child is This?</h6>
+
                 </div>
             }
 
