@@ -38,7 +38,7 @@ const IndexPage = () => {
         <SEO title="Sparkle Season 2025" />
         <section style={{ minHeight: '100dvh', display: "flex", flexDirection: "column", gap: "2rem", padding: "2rem", justifyContent: "center", alignItems: "center" }}>
             {daysTilChristmas > 1 &&
-                <div style={{ maxWidth: "600px" }}>
+                <div style={{ width: "100%", maxWidth: "600px" }}>
                     <p style={{ fontWeight: "bold" }}>You're too early! Do you shake your presents before Christmas, too?</p>
                     <figure>
                         <img src="/img/shaking-present.jpg" alt="picture of a nerd shaking a Christmas gift. That is you."></img>
