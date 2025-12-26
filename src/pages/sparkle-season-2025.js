@@ -47,7 +47,7 @@ const IndexPage = () => {
                 </div>
             }
             {daysTilChristmas <= 1 &&
-                <div style={{ maxWidth: "600px" }}>
+                <div style={{ width: "100%", maxWidth: "600px" }}>
                     {daysTilChristmas > 0 &&
                         <p style={{ fontWeight: "bold" }}>Okay, you can have an early treat.</p>
                     }
